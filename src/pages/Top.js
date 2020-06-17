@@ -30,7 +30,7 @@ const Top = () => {
                 }
             </VideoGrid>
         </Layout>
-    )
+    );
 }
 
 export default Top
