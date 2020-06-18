@@ -1,20 +1,11 @@
 import React, {useContext} from 'react'
 import { Store } from '../../store/index'
 import SideListItem from '../SideListItem/SideListItem'
-
+import Style from './SideList.module.scss'
 const SideList = () => {
     const { globalState } = useContext(Store)
-    // const SetRelatedVideo = async (id) => {
-    //     await fetchRelatedData(id).then((res) => {
-    //         setGlobalState({ type: 'SET_RELATED', payload: { related: res.data.items } })
-    //     })
-    // }
-    // useEffect(() => {
-    //     SetRelatedVideo(globalState.selected.id)
-    // // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [globalState.selected])
     return (
-        <div>
+        <div className={Style.sidenav}>
             {
                 globalState.related ? globalState.related.map((video) => {
                     return (
